@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "hack:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -138,7 +138,7 @@ int const mouseYank = 1, mouseSelect = 0;
 unsigned int const highlightBg = 160, highlightFg = 15;
 char const wDelS[] = "!\"#$%&'()*+,-./:;<=>?@[\\]^`{|}~", wDelL[] = " \t";
 char *nmKeys [] = {              ///< Shortcusts executed in normal mode
-  "R/Building\nN", "r/Building\n", "X/juli@machine\nN", "x/juli@machine\n",
+  "R/Building\nN", "r/Building\n", "X/x@machine\nN", "x/x@machine\n",
   "Q?[Leaving vim, starting execution]\n","F/: error:\nN", "f/: error:\n", "DQf"
 };
 unsigned int const amountNmKeys = sizeof(nmKeys) / sizeof(*nmKeys);
@@ -206,8 +206,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+	{ MODKEY,               XK_L,           zoom,           {.f = +1} },
+	{ MODKEY,               XK_H,           zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
